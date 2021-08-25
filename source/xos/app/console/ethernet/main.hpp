@@ -16,7 +16,7 @@
 ///   File: main.hpp
 ///
 /// Author: $author$
-///   Date: 3/8/2020
+///   Date: 3/8/2020, 8/24/2021
 ///////////////////////////////////////////////////////////////////////
 #ifndef XOS_APP_CONSOLE_ETHERNET_MAIN_HPP
 #define XOS_APP_CONSOLE_ETHERNET_MAIN_HPP
@@ -69,7 +69,7 @@ protected:
             }
         }
         if ((address = ethernet.set_to_adapter(index))) {
-            this->outl(ethernet.adapter_name().chars(), " ", ethernet.actual_string().chars(), null);
+            this->outlln(ethernet.adapter_name().chars(), " ", ethernet.actual_string().chars(), null);
         }
         return err;
     }

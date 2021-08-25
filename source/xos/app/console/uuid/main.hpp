@@ -16,7 +16,7 @@
 ///   File: main.hpp
 ///
 /// Author: $author$
-///   Date: 5/4/2020
+///   Date: 5/4/2020, 8/24/2021
 ///////////////////////////////////////////////////////////////////////
 #ifndef XOS_APP_CONSOLE_UUID_MAIN_HPP
 #define XOS_APP_CONSOLE_UUID_MAIN_HPP
@@ -76,7 +76,7 @@ protected:
         LOGGER_IS_LOGGED_DEBUG("uuid.generate(index = " << signed_to_string(index) << ")...");
         if ((uuid.generate(index))) {
             LOGGER_IS_LOGGED_DEBUG("...uuid.generate(index = " << signed_to_string(index) << ")");
-            this->out(uuid.string().chars());
+            this->outln(uuid.string().chars());
         } else {
             LOGGER_IS_LOGGED_ERROR("...failed on uuid.generate(index = " << signed_to_string(index) << ")");
         }
