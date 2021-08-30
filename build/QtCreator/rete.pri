@@ -16,10 +16,12 @@
 #   File: rete.pri
 #
 # Author: $author$
-#   Date: 8/3/2021
+#   Date: 8/29/2021
 #
 # Build specific QtCreator .pri file for rete
 ########################################################################
+# depends rostra;nadir;fila;crono;cifra
+
 contains(BUILD_OS,Uname) {
 UNAME = $$system(uname)
 
@@ -46,28 +48,6 @@ BUILD_OS = os
 #BUILD_CPP_VERSION = 11
 
 ########################################################################
-# nadir
-#
-# pkg-config --cflags --libs nadir
-#
-
-# build nadir INCLUDEPATH
-#
-build_nadir_INCLUDEPATH += \
-
-# build nadir DEFINES
-#
-build_nadir_DEFINES += \
-
-# build nadir FRAMEWORKS
-#
-build_nadir_FRAMEWORKS += \
-
-# build nadir LIBS
-#
-build_nadir_LIBS += \
-
-########################################################################
 # rostra
 #
 # pkg-config --cflags --libs rostra
@@ -88,6 +68,28 @@ build_rostra_FRAMEWORKS += \
 # build rostra LIBS
 #
 build_rostra_LIBS += \
+
+########################################################################
+# nadir
+#
+# pkg-config --cflags --libs nadir
+#
+
+# build nadir INCLUDEPATH
+#
+build_nadir_INCLUDEPATH += \
+
+# build nadir DEFINES
+#
+build_nadir_DEFINES += \
+
+# build nadir FRAMEWORKS
+#
+build_nadir_FRAMEWORKS += \
+
+# build nadir LIBS
+#
+build_nadir_LIBS += \
 
 ########################################################################
 # fila
@@ -164,15 +166,15 @@ build_rete_INCLUDEPATH += \
 $${build_cifra_INCLUDEPATH} \
 $${build_crono_INCLUDEPATH} \
 $${build_fila_INCLUDEPATH} \
-$${build_rostra_INCLUDEPATH} \
 $${build_nadir_INCLUDEPATH} \
+$${build_rostra_INCLUDEPATH} \
 
 
 # build rete DEFINES
 #
 build_rete_DEFINES += \
-$${build_nadir_DEFINES} \
 $${build_rostra_DEFINES} \
+$${build_nadir_DEFINES} \
 $${build_fila_DEFINES} \
 $${build_crono_DEFINES} \
 $${build_cifra_DEFINES} \
@@ -184,8 +186,8 @@ build_rete_FRAMEWORKS += \
 $${build_cifra_FRAMEWORKS} \
 $${build_crono_FRAMEWORKS} \
 $${build_fila_FRAMEWORKS} \
-$${build_rostra_FRAMEWORKS} \
 $${build_nadir_FRAMEWORKS} \
+$${build_rostra_FRAMEWORKS} \
 
 
 # build rete LIBS
@@ -194,7 +196,7 @@ build_rete_LIBS += \
 $${build_cifra_LIBS} \
 $${build_crono_LIBS} \
 $${build_fila_LIBS} \
-$${build_rostra_LIBS} \
 $${build_nadir_LIBS} \
+$${build_rostra_LIBS} \
 
 

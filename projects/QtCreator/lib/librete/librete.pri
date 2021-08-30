@@ -23,6 +23,7 @@
 
 ########################################################################
 # librete
+XOS_LIB_RETE_VERSION_BUILD_DATE = $$system(~/bin/utility/tdate)
 
 # librete TARGET
 #
@@ -40,6 +41,7 @@ $${rete_INCLUDEPATH} \
 librete_DEFINES += \
 $${rete_DEFINES} \
 DEFAULT_LOGGING_LEVELS_ERROR \
+XOS_LIB_RETE_VERSION_BUILD_DATE=$${XOS_LIB_RETE_VERSION_BUILD_DATE} \
 
 ########################################################################
 # librete OBJECTIVE_HEADERS
